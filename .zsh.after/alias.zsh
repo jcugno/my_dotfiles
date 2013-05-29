@@ -1,5 +1,5 @@
 alias server='python -m SimpleHTTPServer'
-unalias vim
+#unalias vim
 unalias grc
 unalias gls
 alias hist='history 1'
