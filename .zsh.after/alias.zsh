@@ -2,7 +2,7 @@ alias server='python -m SimpleHTTPServer'
 #unalias vim
 unalias grc
 unalias gls
-alias hist='history 1'
+alias history='history 1'
 
 alias v='f -e vim' # quick opening files with vim
 
