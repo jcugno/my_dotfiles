@@ -3,6 +3,9 @@ alias server='python -m SimpleHTTPServer'
 unalias grc
 unalias gls
 alias history='history 1'
+alias h='history 100000'
+
+alias tmux="TERM=screen-256color-bce tmux"
 
 alias v='f -e vim' # quick opening files with vim
 
