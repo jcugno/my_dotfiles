@@ -38,7 +38,6 @@
 
 
     // EcmaScript 5.
-    "es5"           : true,   // Allow EcmaScript 5 syntax.
     "strict"        : false,  // Require `use strict` pragma in every file.
     "globalstrict"  : false,  // Allow global "use strict" (also enables 'strict').
 
@@ -67,6 +66,7 @@
 
 
     // Persone styling prefrences.
+    "laxcomma"      : true,
     "newcap"        : true,   // Require capitalization of all constructor functions e.g. `new F()`.
     "noempty"       : true,   // Prohibit use of empty blocks.
     "nonew"         : true,   // Prohibit use of constructors for side-effects.
