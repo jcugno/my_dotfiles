@@ -25,6 +25,8 @@ eval $(gdircolors ~/.dir_colors)
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 alias d_rm_exit="docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm"
-alias d_rm_all="d_kill && d_rm_exit"
+alias d_rm_all='docker rm $(docker ps -a -q)'
+alias d_kill_and_rm="d_kill && d_rm_all"
 alias d_kill='docker kill $(docker ps -a -q)'
 alias d_stop='docker stop $(docker ps -a -q)'
+alias d_rm_dangling='docker rmi $(docker images -q -f dangling=true)'
