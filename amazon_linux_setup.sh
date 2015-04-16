@@ -11,6 +11,8 @@ echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 sudo mkdir -p /private/etc/shells
 echo "/usr/local/bin/zsh" | sudo tee -a /private/etc/shells
 
+cd $HOME
+
 sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 
 git clone http://github.com/jcugno/dot_vim.git
