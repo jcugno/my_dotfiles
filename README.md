@@ -3,10 +3,10 @@ Jared's Dotfiles
 
 If you're on ubuntu or amazon linux just run the corresponding .sh first
 
-Please be sure to run
-`sudo adduser jcugno`
-`sudo visudo`
-And add: `jcugno ALL=NOPASSWD: ALL`
+Please be sure to run:
+1. `sudo adduser jcugno`
+2. `sudo visudo`
+3. And add: `jcugno ALL=NOPASSWD: ALL`
 
 For vim please see: git://github.com/jcugno/dot_vim.git
 
