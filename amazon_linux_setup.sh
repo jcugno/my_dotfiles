@@ -8,6 +8,9 @@ wget http://www.zsh.org/pub/zsh-5.0.7.tar.bz2 && tar xvjf zsh-5.0.7.tar.bz2 && c
 ./configure && make && sudo make install
 echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 
+sudo mkdir -p /private/etc/shells
+echo "/usr/local/bin/zsh" | sudo tee -a /private/etc/shells
+
 sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 
 git clone http://github.com/jcugno/dot_vim.git
