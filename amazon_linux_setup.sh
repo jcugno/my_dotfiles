@@ -2,7 +2,7 @@
 
 cd $HOME
 
-sudo yum install gcc ncurses-devel ctags.x86_64 rake -y
+sudo yum install gcc ncurses-devel ctags.x86_64 tmux rake -y
 
 wget http://www.zsh.org/pub/zsh-5.0.7.tar.bz2 && tar xvjf zsh-5.0.7.tar.bz2 && cd zsh-5.0.7
 ./configure && make && sudo make install
@@ -18,7 +18,7 @@ mv dot_vim .vim
 
 rm .vimrc
 
-ln -s ~/.vim/vimrc .vimrc
+ln -s $HOME/.vim/vimrc .vimrc
 
 cd $HOME/.vim
 
@@ -32,6 +32,8 @@ rm .dir_colors
 rm .hushlogin
 rm .jshintrc
 rm .tmux.conf
+rm .wgetrc
+rm .vrapperrc
 
 rm -rf .zsh.after
 rm -rf .zsh.prompts
