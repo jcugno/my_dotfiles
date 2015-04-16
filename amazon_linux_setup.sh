@@ -4,8 +4,8 @@ cd $HOME
 
 sudo yum install gcc ncurses-devel ctags.x86_64 tmux rake -y
 
-wget http://www.zsh.org/pub/zsh-5.0.7.tar.bz2 && tar xvjf zsh-5.0.7.tar.bz2 && cd zsh-5.0.7
-./configure && make && sudo make install
+ wget http://www.zsh.org/pub/zsh-5.0.7.tar.bz2 && tar xvjf zsh-5.0.7.tar.bz2 && cd zsh-5.0.7
+ ./configure && make && sudo make install
 echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 
 sudo mkdir -p /private/etc/shells
@@ -15,7 +15,9 @@ sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/instal
 
 git clone http://github.com/jcugno/dot_vim.git
 
-mv .vim .vim-backup
+rm -rf .vim
+
+pwd
 
 mv dot_vim .vim
 
