@@ -64,6 +64,6 @@ rm fasd.zip
 cd clvv-fasd-4822024/
 sudo make install
 
-sudo usermod -a -G ec2-user jcugno
+sudo usermod -a -G ubuntu jcugno
 
 sudo chsh -s /usr/local/bin/zsh jcugno
