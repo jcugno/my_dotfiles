@@ -5,7 +5,7 @@ If you're on ubuntu or amazon linux just run the corresponding .sh first
 
 Please be sure to run:
 
-1. `sudo adduser jcugno`
+1. `sudo adduser -m jcugno`
 2. `sudo visudo`
 3. And add: `jcugno ALL=NOPASSWD: ALL`
 
