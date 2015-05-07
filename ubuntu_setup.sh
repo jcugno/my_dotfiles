@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo apt-get install rake
+sudo apt-get install make rake -y
 
 sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 
@@ -20,7 +20,7 @@ cd .vim
 
 git clone http://github.com/gmarik/vundle.git bundle/vundle
 
-vim +BundleInstall +qall 2&> /dev/null
+vim +BundleInstall +qall
 
 cd ..
 
@@ -50,5 +50,5 @@ sudo make install
 
 sudo usermod -a -G ubuntu jcugno
 
-sudo apt-get install zsh
+sudo apt-get install zsh -y
 chsh -s `which zsh`
