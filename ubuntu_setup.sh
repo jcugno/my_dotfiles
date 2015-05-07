@@ -30,6 +30,7 @@ rm .jshintrc
 rm .tmux.conf
 
 rm -rf .zsh.after
+rm -rf .zsh.prompts
 
 ln -s my_dotfiles/.dir_colors .dir_colors
 ln -s my_dotfiles/.hushlogin .hushlogin
