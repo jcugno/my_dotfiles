@@ -1,33 +1,46 @@
 #! /bin/bash
 
-sudo apt-get install make rake -y
+cd $HOME
+
+sudo apt-get install gcc libncurses5-dev ctags tmux rake -y
+
+ wget http://www.zsh.org/pub/zsh-5.0.7.tar.bz2 && tar xvjf zsh-5.0.7.tar.bz2 && cd zsh-5.0.7
+ ./configure && make && sudo make install
+echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
+
+sudo mkdir -p /private/etc/shells
+echo "/usr/local/bin/zsh" | sudo tee -a /private/etc/shells
+
+cd $HOME
 
 sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 
-cd ..
-
 git clone http://github.com/jcugno/dot_vim.git
 
-mv .vim .vim-backup
+rm -rf .vim
+
+pwd
 
 mv dot_vim .vim
 
 rm .vimrc
 
-ln -s ~/.vim/vimrc .vimrc
+ln -s $HOME/.vim/vimrc .vimrc
 
-cd .vim
+cd $HOME/.vim
 
 git clone http://github.com/gmarik/vundle.git bundle/vundle
 
-vim +BundleInstall +qall
+vim --noplugin -N \"+set hidden\" \"+syntax on\" +BundleClean +BundleInstall +qall
 
-cd ..
+cd $HOME
 
 rm .dir_colors
 rm .hushlogin
 rm .jshintrc
 rm .tmux.conf
+rm .wgetrc
+rm .vrapperrc
 
 rm -rf .zsh.after
 rm -rf .zsh.prompts
@@ -51,7 +64,6 @@ rm fasd.zip
 cd clvv-fasd-4822024/
 sudo make install
 
-sudo usermod -a -G ubuntu jcugno
+sudo usermod -a -G ec2-user jcugno
 
-sudo apt-get install zsh -y
-chsh -s `which zsh`
+sudo chsh -s /usr/local/bin/zsh jcugno
