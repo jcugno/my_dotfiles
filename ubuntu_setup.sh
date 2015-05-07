@@ -29,6 +29,8 @@ rm .hushlogin
 rm .jshintrc
 rm .tmux.conf
 
+rm -rf .zsh.after
+
 ln -s my_dotfiles/.dir_colors .dir_colors
 ln -s my_dotfiles/.hushlogin .hushlogin
 ln -s my_dotfiles/.jshintrc .jshintrc
