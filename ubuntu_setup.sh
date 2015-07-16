@@ -4,7 +4,7 @@ cd $HOME
 
 sudo apt-get install gcc libncurses5-dev ctags tmux rake -y
 
- wget http://www.zsh.org/pub/zsh-5.0.7.tar.bz2 && tar xvjf zsh-5.0.7.tar.bz2 && cd zsh-5.0.7
+ wget http://www.zsh.org/pub/zsh.tar.bz2 && tar xvjf zsh.tar.bz2 && cd zsh*
  ./configure && make && sudo make install
 echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 
