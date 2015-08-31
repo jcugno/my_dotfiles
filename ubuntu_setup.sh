@@ -1,33 +1,49 @@
 #! /bin/bash
 
-sudo apt-get install rake
+cd $HOME
+
+sudo apt-get install gcc libncurses5-dev ctags tmux rake -y
+
+ wget http://www.zsh.org/pub/zsh.tar.bz2 && tar xvjf zsh.tar.bz2 && cd zsh*
+ ./configure && make && sudo make install
+echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
+
+sudo mkdir -p /private/etc/shells
+echo "/usr/local/bin/zsh" | sudo tee -a /private/etc/shells
+
+cd $HOME
 
 sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 
-cd ..
-
 git clone http://github.com/jcugno/dot_vim.git
 
-mv .vim .vim-backup
+rm -rf .vim
+
+pwd
 
 mv dot_vim .vim
 
 rm .vimrc
 
-ln -s ~/.vim/vimrc .vimrc
+ln -s $HOME/.vim/vimrc .vimrc
 
-cd .vim
+cd $HOME/.vim
 
 git clone http://github.com/gmarik/vundle.git bundle/vundle
 
-vim +BundleInstall +qall 2&> /dev/null
+vim --noplugin -N \"+set hidden\" \"+syntax on\" +BundleClean +BundleInstall +qall
 
-cd ..
+cd $HOME
 
 rm .dir_colors
 rm .hushlogin
 rm .jshintrc
 rm .tmux.conf
+rm .wgetrc
+rm .vrapperrc
+
+rm -rf .zsh.after
+rm -rf .zsh.prompts
 
 ln -s my_dotfiles/.dir_colors .dir_colors
 ln -s my_dotfiles/.hushlogin .hushlogin
@@ -50,5 +66,4 @@ sudo make install
 
 sudo usermod -a -G ubuntu jcugno
 
-sudo apt-get install zsh
-chsh -s `which zsh`
+sudo chsh -s /usr/local/bin/zsh jcugno
