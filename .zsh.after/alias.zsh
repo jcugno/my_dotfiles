@@ -5,6 +5,11 @@ unalias gls
 alias history='history 1'
 alias h='history 100000'
 
+alias locked="lsof +L1"
+
+# Overriding gp to be git pull origin instead of git push
+alias gp="git pull origin"
+
 alias tmux="TERM=screen-256color-bce tmux"
 
 alias v='f -e vim' # quick opening files with vim
@@ -30,3 +35,5 @@ alias d_kill_and_rm="d_kill && d_rm_all"
 alias d_kill='docker kill $(docker ps -a -q)'
 alias d_stop='docker stop $(docker ps -a -q)'
 alias d_rm_dangling='docker rmi $(docker images -q -f dangling=true)'
+
+alias release='/Users/jcugno/Development/bridg-config/deploy/bin/release'
