@@ -5,6 +5,9 @@ unalias gls
 alias history='history 1'
 alias h='history 100000'
 
+alias dm="docker-machine"
+alias dc="docker-compose"
+
 alias locked="lsof +L1"
 
 # Overriding gp to be git pull origin instead of git push
