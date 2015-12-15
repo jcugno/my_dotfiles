@@ -9,7 +9,7 @@ Please be sure to run:
 2. `sudo visudo`
 3. And add: `jcugno ALL=NOPASSWD: ALL`
 
-For vim please see: git://github.com/jcugno/dot_vim.git
+For vim please see: https://github.com/jcugno/dot_vim.git
 
 I use yadr at the moment which is what the .zsh.after directory is for
 https://github.com/skwp/dotfiles.git
