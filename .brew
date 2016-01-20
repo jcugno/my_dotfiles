@@ -53,3 +53,9 @@ brew tap caskroom/cask
 brew cask install java
 brew cask install spotify
 brew cask install macvim
+brew cask install robomongo
+brew cask install skype
+brew install awscli
+brew search jq
+brew cask install utc-menu-clock
+
