@@ -55,7 +55,8 @@ brew cask install spotify
 brew cask install macvim
 brew cask install robomongo
 brew cask install skype
+brew cask install skitch
 brew install awscli
 brew search jq
 brew cask install utc-menu-clock
-
+brew cask install sequel-pro
