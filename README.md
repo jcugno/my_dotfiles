@@ -25,6 +25,7 @@ Updated the .secrets file as noted as the yadr link
 Also, copy in the prompt file to ~/.zprezto/modules/prompt/functions
 
 I just found tldr which is npm and I don't have a great way of executing npm installs just yet
+
 1. npm install -g tldr
 1. npm install -g jshint
 1. npm install yarn -g
