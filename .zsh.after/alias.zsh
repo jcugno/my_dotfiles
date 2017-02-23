@@ -39,4 +39,4 @@ alias d_kill='docker kill $(docker ps -a -q)'
 alias d_stop='docker stop $(docker ps -a -q)'
 alias d_rm_dangling='docker rmi $(docker images -q -f dangling=true)'
 
-alias release='/Users/jcugno/Development/bridg-config/deploy/bin/release'
+alias release='/Mine/dev/playground/bridg-config/deploy/bin/release'
