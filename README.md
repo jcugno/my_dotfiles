@@ -25,10 +25,12 @@ Updated the .secrets file as noted as the yadr link
 Also, copy in the prompt file to ~/.zprezto/modules/prompt/functions
 
 I just found tldr which is npm and I don't have a great way of executing npm installs just yet
-npm install -g tldr
-npm install -g jshint
-npm install eslint-plugin-react -g
-npm install eslint-plugin-jsx-a11y -g
-npm install eslint-plugin-import -g
-npm install eslint-config-airbnb -g
-npm install eslint_d -g
+1. npm install -g tldr
+1. npm install -g jshint
+1. npm install yarn -g
+1. npm install -g create-react-app
+1. npm install eslint-plugin-react -g
+1. npm install eslint-plugin-jsx-a11y -g
+1. npm install eslint-plugin-import -g
+1. npm install eslint-config-airbnb -g
+1. npm install eslint_d -g
