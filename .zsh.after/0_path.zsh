@@ -2,6 +2,8 @@
 
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH:$yadr/bin:$yadr/bin/yadr:/usr/local/share/npm/bin:/Users/jcugno/Downloads/phpctags:$EC2_HOME/bin:$AWS_RDS_HOME/bin:/opt/local/bin:/opt/local/sbin:$HOME/.rbenv/shims
 
+export PYTHONPATH=$PYTHONPATH:/Mine/google-cloud-sdk
+
 function setjdk() {
   if [ $# -ne 0 ]; then
    removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
