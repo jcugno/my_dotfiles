@@ -46,6 +46,9 @@ brew install webkit2png
 brew install fasd
 brew install phantomjs
 
+brew install maven
+brew install terraform
+brew install nvm
 brew install oath-toolkit
 
 # Remove outdated versions from the cellar
@@ -62,6 +65,7 @@ brew install awscli
 brew search jq
 brew cask install utc-menu-clock
 brew cask install sequel-pro
+brew cask install slack
 # Quicklook / preview unknown file types such as README as text
 brew cask install qlstephen
 brew cask install qlmarkdown
@@ -71,4 +75,3 @@ brew cask install qlimagesize
 
 # Preview the contents of a standard Apple installer package
 brew cask install suspicious-package
-
